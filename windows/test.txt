@@ -1,0 +1,23 @@
+# https://gallery.technet.microsoft.com/DiskSpd-a-robust-storage-6cd2f223/file/132882/1/Diskspd-v2.0.15.zip
+
+# The Performance test is configured to use: 70% read and 30% writes
+# Read and Write for one IO thread out of 4 total in the Performance test.
+# Duration (-d) 60s
+# Hardware/software cache disabled (-h)
+# 4 worker threads per test file target (-t4)
+# Outstanding I/Os (Queue depth) per target, per worker thread is 2 (-o2)
+# Random read/write (-r)
+# Capture latency info during tests (-L)
+# Create 50M workload files (-c50M)
+# -b is block size
+
+Diskspd.exe -b4K -d60 -h -L -o2 -t4 -r -w30 -c50M C:\ClusterStorage\Volume2\Temp\io.dat > c:\Temp\4kwcdv2.txt
+Diskspd.exe -b4K -d60 -L -o2 -t4 -r -w30 -c50M C:\ClusterStorage\Volume2\Temp\io.dat > c:\Temp\4kwcev2.txt
+Diskspd.exe -b8K -d60 -h -L -o2 -t4 -r -w30 -c50M C:\ClusterStorage\Volume2\Temp\io.dat > c:\Temp\8kwcdv2.txt
+Diskspd.exe -b8K -d60 -L -o2 -t4 -r -w30 -c50M C:\ClusterStorage\Volume2\Temp\io.dat > c:\Temp\8kwcev2.txt
+Diskspd.exe -b16K -d60 -h -L -o2 -t4 -r -w30 -c50M C:\ClusterStorage\Volume2\Temp\io.dat > c:\Temp\16kwcdv2.txt
+Diskspd.exe -b16K -d60 -L -o2 -t4 -r -w30 -c50M C:\ClusterStorage\Volume2\Temp\io.dat > c:\Temp\16kwcev2.txt
+Diskspd.exe -b32K -d60 -h -L -o2 -t4 -r -w30 -c50M C:\ClusterStorage\Volume2\Temp\io.dat > c:\Temp\32kwcdv2.txt
+Diskspd.exe -b32K -d60 -L -o2 -t4 -r -w30 -c50M C:\ClusterStorage\Volume2\Temp\io.dat > c:\Temp\32kwcev2.txt
+Diskspd.exe -b64K -d60 -h -L -o2 -t4 -r -w30 -c50M C:\ClusterStorage\Volume2\Temp\io.dat > c:\Temp\64kwcdv2.txt
+Diskspd.exe -b64K -d60 -L -o2 -t4 -r -w30 -c50M C:\ClusterStorage\Volume2\Temp\io.dat > c:\Temp\64kwcev2.txt
