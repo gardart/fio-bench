@@ -1,2 +1,2 @@
 # fio-bench
-Benchmarking tests using FIO
+Benchmarking tests using tools like FIO
